@@ -106,6 +106,7 @@
       width: 300px;
       height: 200px;
       object-fit: cover;
+      cursor: pointer;
     }
 
     footer {
@@ -121,6 +122,7 @@
       color: #fff;
       font-size: 16px;
     }
+
     @media (max-width: 480px) {
       .hero-text h2 {
         font-size: 30px;
@@ -144,6 +146,86 @@
         height: 180px; /* Adjust image height for smaller screens */
       }
     }
+
+    /* Cybersecurity Section */
+.cybersecurity-section {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the section */
+  justify-content: space-between;
+  padding: 50px;
+  color: rgb(241, 240, 242);
+  background-image: url('https://wallpapercave.com/wp/wp6794535.jpg');
+  background-size: cover;
+  background-position: center;
+  height: auto; /* Allow the height to adjust based on the content */
+}
+
+.cybersecurity-section .text {
+  width: 50%;
+  text-align: left;
+  margin-right: 20px; /* Optional space between text and image */
+  flex: 1; /* Allow text area to take up remaining space */
+}
+
+.cybersecurity-section .image {
+  width: 50%;
+  height: auto; /* Allow image height to adjust as needed */
+  flex: 1; /* Allow the image to take up the remaining space */
+}
+
+    /* Software and Web Development Section */
+.software-section {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the section */
+  justify-content: space-between;
+  padding: 50px;
+  color: white;
+  background-image: url('https://i.pinimg.com/736x/4b/18/a6/4b18a6a3947f6d4a69b4533b1a30c90b.jpg');
+  background-size: cover;
+  background-position: center;
+  height: auto; /* Allow the height to adjust based on the content */
+}
+
+.software-section .text {
+  width: 50%;
+  text-align: right;
+  margin-left: 20px; /* Optional space between text and image */
+  flex: 1; /* Allow text area to take up remaining space */
+}
+
+.software-section .image {
+  width: 50%;
+  height: auto; /* Allow image height to adjust as needed */
+  flex: 1; /* Allow the image to take up the remaining space */
+}
+
+/* Other Skills Section */
+.other-skills-section {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the section */
+  justify-content: space-between;
+  padding: 50px;
+  color: white;
+  background-image: url('https://i.pinimg.com/736x/27/08/bf/2708bfa69a1154bf348c91d6a19c4ac6.jpg');
+  background-size: cover;
+  background-position: center;
+  height: auto; /* Allow the height to adjust based on the content */
+}
+
+.other-skills-section .text {
+  width: 50%;
+  text-align: left;
+  margin-right: 20px; /* Optional space between text and image */
+  flex: 1; /* Allow text area to take up remaining space */
+}
+
+.other-skills-section .image {
+  width: 50%;
+  height: auto; /* Allow image height to adjust as needed */
+  flex: 1; /* Allow the image to take up the remaining space */
+}
+
+
   </style>
 </head>
 <body>
@@ -153,7 +235,7 @@
         <li><a href="#">Home</a></li>
         <li><a onclick="scrollToSection()">About</a></li>
         <li><a onclick="scrollToSection()">Skills</a></li>
-        <li><a onclick="scrollToSection()">Contact</a></li>
+        <li><a href="https://www.linkedin.com/in/jayaraj-v-7b2bba259">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -176,25 +258,73 @@
     <h3>vulnerabilities, with a particular focus on network security. I welcome the opportunity to</h3>
     <h3>connect and collaborate on innovative projects.</h3>
     </b>
-    </section>
-    <br><h2><center>INTRESTS AND SKILLS</center></h2><br>
-    <div class="gallery-container">
-      <div class="gallery-item">
-        <img src="https://wallpapercave.com/wp/wp14786080.jpg"  alt="Placeholder Image">
-        <h4><b><center>Cybersecurity</center></b></h4>
-      </div>
-      <div class="gallery-item">
-        <img src="https://wallpapercave.com/wp/wp7039131.png" alt="Placeholder Image">
-        <h4><b><center>Software and web development</center></b></h4>
-      </div>
-      <div class="gallery-item">
-        <img src="https://wallpapercave.com/wp/wp12073733.jpg" alt="Placeholder Image">
-        <h4><b><center>Other Skills</center></b></h4><br>
-      </div>
+  </section>
+  
+  <br><h2><center>INTERESTS AND SKILLS</center></h2><br>
+  <div class="gallery-container">
+    <div class="gallery-item" onclick="scrollToCybersecurity()">
+      <img src="https://wallpapercave.com/wp/wp14786080.jpg" alt="Cybersecurity Image">
+      <h4><b><center>Cybersecurity</center></b></h4>
+    </div>
+    <div class="gallery-item" onclick="scrollToSoftwareWebDev()">
+      <img src="https://wallpapercave.com/wp/wp7039131.png" alt="Software and Web Development Image">
+      <h4><b><center>Software and Web Development</center></b></h4>
+    </div>
+    <div class="gallery-item" onclick="scrollToOtherSkills()">
+      <img src="https://wallpapercave.com/wp/wp12073733.jpg" alt="Other Skills Image">
+      <h4><b><center>Other Skills</center></b></h4><br>
+    </div>
+  </div>
+  <br><br><br><br><br>
+  <!-- Cybersecurity Section - Image Right, Text Left -->
+  <section class="cybersecurity-section" id="cybersecurity">
+    <div class="text">
+      <h2>Cybersecurity Projects and Research Paper</h2><br>
+      <p><b>> Research Paper:</b> Analysing Security Vulnerability in Mobile Browsers 
+        Analysing Security Vulnerabilities in Mobile Browsers explores risks like phishing, tracking, and browser exploits through real
+        world testing. The study highlights key weaknesses and provides insights to improve mobile browser security. </p>
+      <p><b>> Firewall log analyser:</b> A Python-based tool for monitoring and analysing firewall logs </p>
+      <p><b>> Domain scanner:</b> A security tool to scan domains for vulnerabilities and misconfigurations</p>
+      <p><b>> ARP Poisoning & Packet Interception:</b> A tool for intercepting and analysing network traffic via ARP spoofing</p>
+      <p><b>> Real-Time Network Attack Detection:</b> An AI-powered intrusion detection system for identifying cyber threats</p>
+      <p><b>> Multi-Vector Flooding Tool:</b> A penetration testing tool simulating multiple network flooding attacks</p>
+      <p><b>> Advanced Network Packet Sniffer:</b> A tool for deep packet inspection and real-time network monitoring</p>
+      <p><b>> Network Level Firewall:</b> A firewall for monitoring and filtering network traffic at the system level</p>
+      <p><b>> Device Level Firewall:</b> A security layer for controlling inbound/outbound traffic at the device level</p>
+      <p><b>> Intruder Detection System (IDS):</b> A system to detect unauthorized access attempts in networks </p>
+    </div>
+    <div class="image"></div>
+  </section>
+  <br><br><br><br><br>
+  <!-- Software and Web Development Section - Image Left, Text Right -->
+  <section class="software-section" id="software-web-development">
+    <div class="image"></div>
+    <div class="text">
+      <h2>Software and Web Development</h2><br>
+      <p><b>> Event and complaint managing application:</b> A web app for event hosting and complaint registration using Django</p>
+      <p><b>> Portfolio website:</b> A personal website showcasing skills, projects, and achievements </p>
+      <p><b>> News App:</b> A real-time news aggregator fetching and displaying headlines dynamically</p>
+      <p><b>> Password manager:</b> A secure vault for storing and managing encrypted passwords</p>
+      <p><b>> P2P CLI messaging script:</b> A peer-to-peer messaging system over a local network </p>
+      <p><b>> Chathurya Resource Web App:</b> A web app which provides students resources to develop their skills </p>
+      <p><b>> Connect developer:</b> Geography based web app which helps near by developers to connect with each other</p>
     </div>
   </section>
+  <br><br><br><br><br>
+  <!-- Other Skills Section - Image Right, Text Left -->
+  <section class="other-skills-section" id="other-skills">
+    <div class="text">
+      <h2>Other Skills</h2><br>
+      <p><b>> Programming:</b> C, C++, Java, Python</p>
+<p><b>> Web Technologies:</b> HTML, CSS, JavaScript, PHP, React.js, Django</p>
+<p><b>> Cybersecurity & Networking:</b> Penetration Testing, Network Security, Vulnerability Analysis, Scapy, Cyber Threat Analysis, VMware, WSL</p>
+<p><b>> Databases & Tools:</b> SQL, MongoDB, GitHub, PyCharm</p>
+<p><b>> Operating Systems:</b> Linux, Windows</p>
+<p><b>> Data Science:</b> Data Mining, Data Analytics</p>
 
-
+      </div>
+    <div class="image"></div>
+  </section>
 
   <script>
     function scrollToSection() {
@@ -203,6 +333,20 @@
         behavior: 'smooth'
       });
     }
+
+    function scrollToCybersecurity() {
+      document.getElementById('cybersecurity').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function scrollToSoftwareWebDev() {
+      document.getElementById('software-web-development').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function scrollToOtherSkills() {
+      document.getElementById('other-skills').scrollIntoView({ behavior: 'smooth' });
+    }
   </script>
+  
+  
 </body>
 </html>
