@@ -1,163 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayaraj Patil - Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #0d1117;
-            color: #ffffff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonlight Theme Replica</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Header */
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #6a0572, #ab42ab);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
-        }
-        .profile-pic {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid #ffd700;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
-            transition: transform 0.3s ease;
-        }
-        .profile-pic:hover {
-            transform: scale(1.08);
-        }
-        .info {
-            max-width: 600px;
-            padding: 20px;
-        }
-        .info h1 {
-            font-size: 2.5rem;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      line-height: 1.5;
+    }
 
-        /* About Me Section */
-        #about {
-            padding: 60px 20px;
-            text-align: center;
-            background: #161b22;
-            border-radius: 30px;
-            margin: 40px auto;
-            max-width: 850px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Skills Section */
-        #skills {
-            padding: 60px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #004dff, #00a6ff);
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-        }
-        .skills-container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-            max-width: 900px;
-            margin: auto;
-        }
-        .skills-container a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .skills-container a:hover {
-            transform: translateY(-8px);
-        }
-        .skills-container img {
-            width: 150px;
-            height: 150px;
-            border-radius: 20px;
-            border: 4px solid #ffcc00;
-            transition: transform 0.3s;
-        }
-        .skills-container img:hover {
-            transform: scale(1.12);
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5); /* Transparent header */
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
 
-        /* Footer */
-        footer {
-            background: #222;
-            color: #ffffff;
-            padding: 25px;
-            text-align: center;
-            font-size: 15px;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-        }
+    header .logo h1 {
+      color: #fff;
+      font-size: 24px;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
-            .profile-pic {
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+    header nav ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    header nav ul li {
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .hero {
+      background-image: url('https://github.com/JayarajVp/img/blob/main/images/6ab989e1-9567-498f-a4e0-240e1efd6a56.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-text h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ed0284;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00010c;
+    }
+
+    .gallery {
+      padding: 50px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6); 
+    }
+
+    .gallery h2 {
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+
+    .gallery-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .gallery-item img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.5); 
+      padding: 20px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      color: #fff;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="https://github.com/JayarajVp/img/blob/main/images/WhatsApp%20Image%202025-03-23%20at%2012.21.26%20AM.jpeg?raw=true" alt="Jayaraj Patil" class="profile-pic">
-        <div class="info">
-            <h1>Jayaraj Patil</h1>
-            <p>Email: jayarajvp2005@gmail.com</p>
-            <p>Current Position: BCA Student & Cybersecurity Enthusiast</p>
-        </div>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hello! I'm Jayaraj Patil, a passionate learner and lateral entry BCA student at Seshadripuram College. 
-            My journey in technology and cybersecurity drives my passion for innovation. 
-        </p>
-        <p>
-            I specialize in developing modern web applications and researching cybersecurity vulnerabilities, with a particular focus on network security. 
-            I welcome the opportunity to connect and collaborate on innovative projects.
-        </p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a onclick="scrollToSection()">About</a></li>
+        <li><a onclick="scrollToSection()">Skills</a></li>
+        <li><a onclick="scrollToSection()">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>HI, I AM</h2>
+      <h2>JAYARAJ PATIL</h2>
+      <p>BCA Student & Cybersecurity Enthusiast, software developer</p>
+      <button onclick="scrollToSection()">Explore</button><br>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>About Me</h2>
+    <b><h3>Hello! I'm Jayaraj Patil, a passionate learner and lateral entry BCA student at</h3>
+    <h3>Seshadripuram College. My journey in technology and cybersecurity drives my passion</h3>
+    <h3>for innovation.</h3><br>
+    <h3>I specialize in developing modern web applications and researching cybersecurity</h3>
+    <h3>vulnerabilities, with a particular focus on network security. I welcome the opportunity to</h3>
+    <h3>connect and collaborate on innovative projects.</h3>
+    </b>
     </section>
-    
-    <section id="skills">
-        <h2>Main Skills</h2>
-        <div class="skills-container">
-            <a href="temp/cyber.html">
-                <img src="https://github.com/JayarajVp/img/blob/main/images/cb.jpeg?raw=true" alt="Cybersecurity">
-                <p>Cybersecurity</p>
-            </a>
-            <a href="temp/web.html">
-                <img src="https://github.com/JayarajVp/img/blob/main/images/web.jpeg?raw=true" alt="Web Development">
-                <p>Web Development</p>
-            </a>
-            <a href="temp/oth.html">
-                <img src="https://github.com/JayarajVp/img/blob/main/images/oth.jpeg?raw=true" alt="Other Skills">
-                <p>Other Skills</p>
-            </a>
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Jayaraj Patil. All Rights Reserved.</p>
-    </footer>
+    <br><h2><center>INTRESTS AND SKILLS</center></h2><br>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="https://wallpapercave.com/wp/wp14786080.jpg"  alt="Placeholder Image">
+        <h4><b><center>Cybersecurity</center></b></h4>
+      </div>
+      <div class="gallery-item">
+        <img src="https://wallpapercave.com/wp/wp7039131.png" alt="Placeholder Image">
+        <h4><b><center>Software and web development</center></b></h4>
+      </div>
+      <div class="gallery-item">
+        <img src="https://wallpapercave.com/wp/wp12073733.jpg" alt="Placeholder Image">
+        <h4><b><center>Other Skills</center></b></h4><br>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script>
+    function scrollToSection() {
+      window.scrollTo({
+        top: document.querySelector('.gallery').offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </body>
 </html>
