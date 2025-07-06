@@ -3,351 +3,264 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jayaraj Patil</title>
-  <link rel="icon" href="https://i.pinimg.com/736x/28/41/53/2841539cc67bee950b3b51870fcaf77e.jpg" type="image/x-icon">
+  <title>Jayaraj Patil | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #fff;
-      line-height: 1.5;
+      background-color: #333333;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
     }
-
+    .container {
+  margin: 1.5cm;
+  background-color: #e0ffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
     header {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.5); /* Transparent header */
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 10;
-    }
+  position: relative;
+  width: 100%;
+  overflow: hidden; 
+}
 
-    header .logo h1 {
-      color: #fff;
-      font-size: 24px;
-    }
+.header-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-    header nav ul {
-      display: flex;
-      list-style-type: none;
-    }
+.header-content {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6); /* Clean, subtle outline */
+  background-color: rgba(62, 88, 73, 0.336);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 30%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.95;
+}
 
-    header nav ul li {
+
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
       margin: 0 15px;
-    }
-
-    header nav ul li a {
+      color: #58a6ff;
       text-decoration: none;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
     }
+    .main-nav {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  z-index: 2;
+}
 
-    .hero {
-      background-image: url('https://github.com/JayarajVp/intro/blob/master/images/WhatsApp%20Image%202025-04-28%20at%209.37.48%20PM.jpeg?raw=true');
-      background-size: cover;
-      background-position: center;
-      height: 80vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+.main-nav a {
+  margin-right: 20px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px black;
+  font-size: 1rem;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+    section {
+      padding: 40px;
+      border-bottom: 1px solid #8e8bb26d;
     }
-
-    .hero-text h2 {
-      font-size: 48px;
+    h2 {
+      color: #e0ffff;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
       margin-bottom: 10px;
     }
-
-    .hero-text p {
-      font-size: 24px;
+    footer {
+      background-color: #32966b;
+      text-align: center;
+      padding: 20px;
+    }
+    .project {
       margin-bottom: 20px;
     }
-
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #ed0284;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #00010c;
-    }
-
-    .gallery {
-      padding: 50px;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.6); 
-    }
-
-    .gallery h2 {
-      margin-bottom: 30px;
-      font-size: 36px;
-    }
-
-    .gallery-container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .gallery-item img {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      cursor: pointer;
-    }
-
-    footer {
-      background-color: rgba(0, 0, 0, 0.5); 
-      padding: 20px;
-      text-align: center;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-
-    footer p {
-      color: #fff;
-      font-size: 16px;
-    }
-
-    @media (max-width: 480px) {
-      .hero-text h2 {
-        font-size: 30px;
-      }
-
-      .hero-text p {
-        font-size: 18px;
-      }
-
-      button {
-        font-size: 16px;
-        padding: 8px 16px;
-      }
-
-      .gallery h2 {
-        font-size: 24px;
-      }
-
-      .gallery-item img {
-        width: 100%;
-        height: 180px; /* Adjust image height for smaller screens */
-      }
-    }
-
-    /* Cybersecurity Section */
-.cybersecurity-section {
-  display: flex;
-  align-items: flex-start; /* Align items at the start of the section */
-  justify-content: space-between;
-  padding: 50px;
-  color: rgb(241, 240, 242);
-  background-image: url('https://wallpapercave.com/wp/wp6794535.jpg');
-  background-size: cover;
-  background-position: center;
-  height: auto; /* Allow the height to adjust based on the content */
+    #contact a {
+  color: #004466;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: #e0ffff;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.cybersecurity-section .text {
-  width: 50%;
-  text-align: left;
-  margin-right: 20px; /* Optional space between text and image */
-  flex: 1; /* Allow text area to take up remaining space */
-}
-
-.cybersecurity-section .image {
-  width: 50%;
-  height: auto; /* Allow image height to adjust as needed */
-  flex: 1; /* Allow the image to take up the remaining space */
-}
-
-    /* Software and Web Development Section */
-.software-section {
-  display: flex;
-  align-items: flex-start; /* Align items at the start of the section */
-  justify-content: space-between;
-  padding: 50px;
-  color: white;
-  background-image: url('https://i.pinimg.com/736x/4a/50/c5/4a50c55b189fb327213e5bdcdca439ac.jpg');
-  background-size: cover;
-  background-position: center;
-  height: auto; /* Allow the height to adjust based on the content */
-}
-
-.software-section .text {
-  width: 50%;
-  text-align: right;
-  margin-left: 20px; /* Optional space between text and image */
-  flex: 1; /* Allow text area to take up remaining space */
-}
-
-.software-section .image {
-  width: 50%;
-  height: auto; /* Allow image height to adjust as needed */
-  flex: 1; /* Allow the image to take up the remaining space */
-}
-
-/* Other Skills Section */
-.other-skills-section {
-  display: flex;
-  align-items: flex-start; /* Align items at the start of the section */
-  justify-content: space-between;
-  padding: 50px;
-  color: white;
-  background-image: url('https://github.com/JayarajVp/intro/blob/master/images/wp10087470-thinkpad-x1-carbon-wallpapers.jpg?raw=true');
-  background-size: cover;
-  background-position: center;
-  height: auto; /* Allow the height to adjust based on the content */
-}
-
-.other-skills-section .text {
-  width: 50%;
-  text-align: left;
-  margin-right: 20px; /* Optional space between text and image */
-  flex: 1; /* Allow text area to take up remaining space */
-}
-
-.other-skills-section .image {
-  width: 50%;
-  height: auto; /* Allow image height to adjust as needed */
-  flex: 1; /* Allow the image to take up the remaining space */
+#contact a:hover {
+  background-color: #32966b;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #00000066;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #58a6ff88;
 }
 
 
   </style>
 </head>
 <body>
+    <div class="container">
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a onclick="scrollToSection()">About</a></li>
-        <li><a onclick="scrollToSection()">Skills</a></li>
-        <li><a href="https://www.linkedin.com/in/jayaraj-v-7b2bba259">Contact</a></li>
-      </ul>
+      
+    <nav class="main-nav">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-text">
-      <h2>HI, I AM</h2>
-      <h2>JAYARAJ PATIL</h2>
-      <p>BCA Student & Cybersecurity Enthusiast, software developer</p>
-      <button onclick="scrollToSection()">Explore</button><br>
-    </div>
-  </section>
-
-  <section class="gallery">
-    <h2>About Me</h2>
-    <b><h3>Hello! I'm Jayaraj Patil, a passionate learner and lateral entry BCA student at</h3>
-    <h3>Seshadripuram College. My journey in technology and cybersecurity drives my passion</h3>
-    <h3>for innovation.</h3><br>
-    <h3>I specialize in developing modern web applications and researching cybersecurity</h3>
-    <h3>vulnerabilities, with a particular focus on network security. I welcome the opportunity to</h3>
-    <h3>connect and collaborate on innovative projects.</h3>
-    </b>
-  </section>
+    
+  <img src="WhatsApp Image 2025-06-29 at 1.24.59 PM.jpeg" alt="Header Background" class="header-img">
   
-  <br><h2><center>INTERESTS AND SKILLS</center></h2><br>
-  <div class="gallery-container">
-    <div class="gallery-item" onclick="scrollToCybersecurity()">
-      <img src="https://wallpapercave.com/wp/wp14786080.jpg" alt="Cybersecurity Image">
-      <h4><b><center>Cybersecurity</center></b></h4>
-    </div>
-    <div class="gallery-item" onclick="scrollToSoftwareWebDev()">
-      <img src="https://wallpapercave.com/wp/wp7039131.png" alt="Software and Web Development Image">
-      <h4><b><center>Software and Web Development</center></b></h4>
-    </div>
-    <div class="gallery-item" onclick="scrollToOtherSkills()">
-      <img src="https://wallpapercave.com/wp/wp12073733.jpg" alt="Other Skills Image">
-      <h4><b><center>Other Skills</center></b></h4><br>
-    </div>
+  <div class="header-content">
+    <h1>Jayaraj Patil</h1>
+    <p>Cybersecurity | Web Developer | IT Support</p>
+        <h1>About Me</h1>
+    <p>Hello! I'm Jayaraj Patil, a passionate learner and lateral entry BCA student at
+Seshadripuram College. My journey in technology and cybersecurity drives my passion
+for innovation.</p>
+<p>I specialize in developing modern web applications and researching cybersecurity
+vulnerabilities, with a particular focus on network security. I welcome the opportunity to
+connect and collaborate on innovative projects.</p>
   </div>
-  <br><br><br><br><br>
-  <!-- Cybersecurity Section - Image Right, Text Left -->
-  <section class="cybersecurity-section" id="cybersecurity">
-    <div class="text">
-      <h2>Cybersecurity Projects and Research Paper</h2><br>
-      <p><b>> Research Paper:</b> Analysing Security Vulnerability in Mobile Browsers 
-        Analysing Security Vulnerabilities in Mobile Browsers explores risks like phishing, tracking, and browser exploits through real
-        world testing. The study highlights key weaknesses and provides insights to improve mobile browser security. </p>
-      <p><b>> Firewall log analyser:</b> A Python-based tool for monitoring and analysing firewall logs </p>
-      <p><b>> Domain scanner:</b> A security tool to scan domains for vulnerabilities and misconfigurations</p>
-      <p><b>> ARP Poisoning & Packet Interception:</b> A tool for intercepting and analysing network traffic via ARP spoofing</p>
-      <p><b>> Real-Time Network Attack Detection:</b> An AI-powered intrusion detection system for identifying cyber threats</p>
-      <p><b>> Multi-Vector Flooding Tool:</b> A penetration testing tool simulating multiple network flooding attacks</p>
-      <p><b>> Advanced Network Packet Sniffer:</b> A tool for deep packet inspection and real-time network monitoring</p>
-      <p><b>> Network Level Firewall:</b> A firewall for monitoring and filtering network traffic at the system level</p>
-      <p><b>> Device Level Firewall:</b> A security layer for controlling inbound/outbound traffic at the device level</p>
-      <p><b>> Intruder Detection System (IDS):</b> A system to detect unauthorized access attempts in networks </p>
-    </div>
-    <div class="image"></div>
-  </section>
-  <br><br><br><br><br>
-  <!-- Software and Web Development Section - Image Left, Text Right -->
-  <section class="software-section" id="software-web-development">
-    <div class="image"></div>
-    <div class="text">
-      <h2>Software and Web Development</h2><br>
-      <p><b>> Event and complaint managing application:</b> A web app for event hosting and complaint registration using Django</p>
-      <p><b>> Portfolio website:</b> A personal website showcasing skills, projects, and achievements </p>
-      <p><b>> News App:</b> A real-time news aggregator fetching and displaying headlines dynamically</p>
-      <p><b>> Password manager:</b> A secure vault for storing and managing encrypted passwords</p>
-      <p><b>> P2P CLI messaging script:</b> A peer-to-peer messaging system over a local network </p>
-      <p><b>> Chathurya Resource Web App:</b> A web app which provides students resources to develop their skills </p>
-      <p><b>> Connect developer:</b> Geography based web app which helps near by developers to connect with each other</p>
-    </div>
-  </section>
-  <br><br><br><br><br>
-  <!-- Other Skills Section - Image Right, Text Left -->
-  <section class="other-skills-section" id="other-skills">
-    <div class="text">
-      <h2>Other Skills</h2><br>
-      <p><b>> Programming:</b> C, C++, Java, Python</p>
-<p><b>> Web Technologies:</b> HTML, CSS, JavaScript, PHP, React.js, Django</p>
-<p><b>> Cybersecurity & Networking:</b> Penetration Testing, Network Security, Vulnerability Analysis, Scapy, Cyber Threat Analysis, VMware, WSL</p>
-<p><b>> Databases & Tools:</b> SQL, MongoDB, GitHub, PyCharm</p>
-<p><b>> Operating Systems:</b> Linux, Windows</p>
-<p><b>> Data Science:</b> Data Mining, Data Analytics</p>
+</header>
+</div>
+  <section id="about">
 
-      </div>
-    <div class="image"></div>
   </section>
 
-  <script>
-    function scrollToSection() {
-      window.scrollTo({
-        top: document.querySelector('.gallery').offsetTop,
-        behavior: 'smooth'
-      });
-    }
+  <section id="skills">
+    <center><h2>Skills</h2></center>
+    <ul>
+      <li><strong>Programming & Scripting:</strong> Python, C, C++, PHP, SQL, Bash (Basics)</li>
+  <li><strong>Web Development:</strong> HTML5, CSS3, JavaScript, React.js, Django, Flask, RESTful APIs</li>
+  <li><strong>Database Systems:</strong> SQLite, MySQL, SQL</li>
+  <li><strong>Frameworks & Tools:</strong> Django, Flask, jQuery, Git, VS Code, PyCharm, ollama</li>
+  <li><strong>CI/CD & DevOps:</strong> GitHub Actions, Jenkins, Docker</li>
+  <li><strong>Platforms & OS:</strong> Windows, Ubuntu, Kali Linux, WSL, VMware</li>
+  <li><strong>Testing & Debugging:</strong> Manual Testing, Unit Testing (Basics), Log Analysis</li>
+  <li><strong>Cybersecurity & Networking:</strong> Firewall Setup, Threat Detection, Vulnerability Analysis, Incident Response, Penetration Testing, ARP Spoofing, Packet Analysis, VPN, DNS, TCP/IP, Network Troubleshooting</li>
+  <li><strong>Security Tools & Platforms:</strong> Burp Suite, QRadar, Metasploit, Nmap, Wireshark, Scapy</li>
+  <li><strong>IT Support:</strong> System Installation, Software Setup, Network Configuration, Peripheral Support, Remote Assistance, User Guidance</li>
+  <li><strong>Documentation & Reporting:</strong> Client Documentation, Invoice Creation, Ticket Tracking, Research Reporting</li>
+  <li><strong>Methodologies & Design:</strong> Agile Methodology, MVC Design Pattern</li>
+  <li><strong>Web Standards & Data Formats:</strong> JSON, XML, AJAX</li>
+    </ul>
+  </section>
 
-    function scrollToCybersecurity() {
-      document.getElementById('cybersecurity').scrollIntoView({ behavior: 'smooth' });
-    }
+  <section id="projects">
+    <center><h2>Projects</h2></center>
 
-    function scrollToSoftwareWebDev() {
-      document.getElementById('software-web-development').scrollIntoView({ behavior: 'smooth' });
-    }
+<div class="project">
+  <h3>Firewall Log Analyzer</h3>
+  <p>Processed 10K+ logs daily using real-world data and 50+ filters for intrusion detection. Boosted SOC response time by 60% through intelligent alerting.</p>
+</div>
 
-    function scrollToOtherSkills() {
-      document.getElementById('other-skills').scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
-  
-  
+<div class="project">
+  <h3>Intruder Detection System (IDS)</h3>
+  <p>Built a real-time packet inspection system with Scapy. Achieved 90%+ detection accuracy on 5K+ packets/hour in a lab network.</p>
+</div>
+
+<div class="project">
+  <h3>Advanced Network Packet Sniffer</h3>
+  <p>Custom Python sniffer decoding TCP, ICMP, and DNS traffic. Captured 10K+ live packets/day for anomaly detection and auditing.</p>
+</div>
+
+<div class="project">
+  <h3>ARP Poisoning & Packet Interception</h3>
+  <p>Developed a MitM tool using ARP spoofing for packet capture and tampering. Intercepted 5K+ packets/session for security testing.</p>
+</div>
+
+<div class="project">
+  <h3>Multi-Vector Flooding Tool (DDoS Simulator)</h3>
+  <p>Simulated TCP/UDP/ICMP DDoS attacks with IP spoofing. Tested server resilience at 300–500 packets/sec for defensive evaluation.</p>
+</div>
+
+<div class="project">
+  <h3>Event & Complaint Management</h3>
+  <p>Django-based platform for event registration and complaint tracking with TinyLlama-powered chatbot for student queries.</p>
+</div>
+
+<div class="project">
+  <h3>Chathurya Resource Portal</h3>
+  <p>Django backend for a resource-sharing site serving 50+ academic files. Improved student engagement by 40% during pilot launch.</p>
+</div>
+
+<div class="project">
+  <h3>Password Manager App</h3>
+  <p>Python GUI tool using AES encryption for credential storage. Used by 60+ students, reducing password-related issues by 45%.</p>
+</div>
+
+<div class="project">
+  <h3>P2P Messaging Script</h3>
+  <p>CLI-based full-duplex communication script with socket programming. Tested across 10+ devices with sub-50ms latency.</p>
+</div>
+
+  </section>
+
+  <section id="experience">
+    <center><h2>Experience</h2></center>
+    <h3><strong>ImagineHealthcare – IT & Network Support (Dec 2024 – May 2025)</strong></h3>
+    <ul>
+      <li>Provided secure remote and onsite support, configuring systems, routers, and DR setups. Integrated medical imaging tools with diagnostic hardware, ensuring 
+data integrity and secure access. Maintained technical documentation and asset tracking with basic log checks for endpoint visibility. Assisted in troubleshooting 
+network issues and implementing basic security practices to reduce system vulnerabilities.</li>
+    </ul>
+    <h3><strong>CYBERSECURITY INTERNSHIP – RESEAECHER INTERN (Dec 2024 – Mar 2025 )</strong></h3>
+    <ul>
+        <li>Conducted 25+ hands-on experiments to evaluate mobile browser risks like phishing, clickjacking, fingerprinting, and tracking. Used 100+ real 
+phishing URLs from the PhishTank dataset, custom attack pages, and Python scripts for controlled testing. Analysed browser behaviour across 4 
+major platforms and proposed 5+ key security improvements to enhance user protection. Findings were compiled into a published research 
+paper aimed at strengthening browser defences against real-world threats. </li>
+    </ul>
+
+    <h3><strong>Freelance Web Development (Jan 2024 – Present)</strong></h3>
+    <ul>
+      <li>Led a small team of 2 developers for collaborative project delivery</br>
+• Quiz Application – Developed a functional quiz platform with student login, randomized questions, real-time scoring, and admin controls 
+using core web technologies. The application was actively used in the Pragnya Science Forum IT Quiz program, engaging 150+ students 
+during live events and continues to support academic quiz activities across the college. Helped reduce manual evaluation time by 60% and 
+improved student participation and performance tracking. 
+• Marine Pulse – Startup NGO: Designed and developed a modern landing page with a clean layout, responsive sections, and branding focus </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <center><h2>Contact</h2></center>
+    <p>Email: <a href="mailto:jayarajvp2005@gmail.com">jayarajvp2005@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/jayaraj-v-7b2bba259" target="_blank">linkedin</a></p>
+    <p>GitHub: <a href="https://github.com/JayarajVp" target="_blank">github</a></p>
+    <p>Portfolio: <a href="https://jayarajvp.github.io/intro/" target="_blank">jayarajvp</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jayaraj Patil. All rights reserved.</p>
+  </footer>
 </body>
 </html>
